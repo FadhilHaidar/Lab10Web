@@ -1,0 +1,66 @@
+/* style_app.css - Apple Clean UI (mint fresh) */
+/* Comments for beginners included */
+
+/* Palette */
+:root{
+  --bg: #FFFFFF;
+  --soft-bg: #F7FEFF;       /* page background */
+  --accent: #8FBCE6;        /* soft blue accent */
+  --muted: #6B7280;
+  --card: #FFFFFF;
+  --radius: 14px;
+  --gap: 1rem;
+  --shadow: 0 10px 30px rgba(15,23,36,0.06);
+}
+
+/* Base */
+*{box-sizing:border-box}
+body.bg-soft-light{ background: linear-gradient(180deg,var(--soft-bg),#ffffff); color:#0F1724; -webkit-font-smoothing:antialiased;}
+.container{ max-width:1100px; }
+
+/* Navbar */
+.navbar{
+  background: rgba(255,255,255,0.9);
+  transition: box-shadow .2s ease, backdrop-filter .2s ease;
+  border-bottom: 1px solid rgba(15,23,36,0.03);
+}
+.navbar.scrolled{ box-shadow: var(--shadow); backdrop-filter: blur(6px); }
+
+.brand-icon{
+  width:44px;height:44px;border-radius:10px;display:inline-block;
+  background: linear-gradient(135deg,#E6FBFF,var(--accent));
+  box-shadow: var(--shadow);
+}
+.brand-name{ font-weight:600; font-size:1rem; color: #0f1724; }
+
+/* Page header / hero hint */
+.page-hero{ padding: 2.5rem 0; margin-bottom:1rem; }
+.hero-card{ background: var(--card); border-radius: var(--radius); padding:1.6rem; box-shadow: var(--shadow); }
+
+/* Cards */
+.card-clean{
+  background: var(--card); border-radius: var(--radius);
+  padding:1.1rem; box-shadow: var(--shadow); border:none;
+}
+.card-actions{ display:flex; gap:.5rem; }
+
+/* Table modern (rounded, soft) */
+.table-modern{ background:transparent; border-radius:10px; overflow:hidden; }
+.table-modern table{ background:var(--card); border-radius:10px; }
+.table-modern thead th{ background: rgba(143,188,230,0.06); border-bottom: none; color:#0f1724; font-weight:600; }
+.table-modern tbody tr{ border-bottom:1px solid rgba(15,23,36,0.03); }
+.table-modern img{ width:64px; height:64px; object-fit:cover; border-radius:8px; }
+
+/* Form */
+.form-control{ border-radius:10px; box-shadow:none; border:1px solid rgba(15,23,36,0.06); }
+.btn-primary{ background: linear-gradient(90deg,var(--accent),#66A8D6); border:none; border-radius:10px; padding:.55rem .9rem; }
+.btn-outline{ border-radius:10px; }
+
+/* Utilities */
+.small-muted{ color:var(--muted); font-size:.9rem; }
+
+/* responsive tweaks */
+@media (max-width:768px){
+  .table-modern img{ width:54px; height:54px; }
+  .brand-name{ font-size:.95rem; }
+}
